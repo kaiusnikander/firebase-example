@@ -1,6 +1,8 @@
 import { addDoc, serverTimestamp } from "firebase/firestore";
 import { useState } from "react";
 import { useUser } from "reactfire";
+import Button from 'react-bootstrap/Button';
+
 
 export default function Form({ messagesCollection }) {
   const [newMessage, setNewMessage] = useState("");
@@ -37,7 +39,7 @@ export default function Form({ messagesCollection }) {
         onChange={handleChange}
         placeholder="Type your message here..."
       />
-      <button disabled={!newMessage}>Send</button>
+      <Button variant="outline-warning" disabled={!newMessage}>Send</Button>
     </form>
   );
 }
