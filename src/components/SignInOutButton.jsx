@@ -11,6 +11,8 @@ export default function SignInOutButton() {
     <Button variant="outline-dark" onClick={() => signOut(auth)}>Sign out</Button>{' '}
     </>
   ) : (
-    <Button onClick={() => signInWithGoogle(auth)}>Sign in with Google</Button>
+    <>
+    <Button variant="outline-dark" onClick={() => signInWithGoogle(auth)}>Sign in with Google</Button>{' '}
+    </>
   );
 }
