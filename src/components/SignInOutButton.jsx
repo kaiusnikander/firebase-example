@@ -7,8 +7,8 @@ export default function SignInOutButton() {
   const auth = useAuth();
 
   return signInCheckResult.signedIn ? (
-    <Button variant="danger" onClick={() => signOut(auth)}>Sign out</Button>
+    <Button variant="primary" onClick={() => signOut(auth)}>Sign out</Button>
   ) : (
-    <button onClick={() => signInWithGoogle(auth)}>Sign in with Google</button>
+    <Button onClick={() => signInWithGoogle(auth)}>Sign in with Google</Button>
   );
 }
