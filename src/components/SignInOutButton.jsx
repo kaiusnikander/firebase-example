@@ -8,7 +8,7 @@ export default function SignInOutButton() {
 
   return signInCheckResult.signedIn ? (
     <>
-    <Button variant="outline-warning" onClick={() => signOut(auth)}>Sign out</Button>{' '}
+    <Button variant="outline-warning" fixed='sticky' onClick={() => signOut(auth)}>Sign out</Button>{' '}
     </>
   ) : (
     <>
