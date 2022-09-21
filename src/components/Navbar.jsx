@@ -5,10 +5,10 @@ import SignInOutButton from './SignInOutButton';
 
 export default function Navbar() {
   const {data:user} = useUser();
-  console.log(user)
+
   return (
     <>
-    <BSNavbar collapseOnSelect fixed='top' expand='sm'bg='secondary' variant='secondary'>
+    <BSNavbar collapseOnSelect fixed='top' expand='sm'bg='dark' variant='dark'>
       <Container>
         <BSNavbar.Brand>Chatti</BSNavbar.Brand>
         <BSNavbar.Toggle aria-controls='responsive-navbar-nav' />

@@ -1,6 +1,7 @@
 import { deleteDoc, doc } from "firebase/firestore";
 import { useFirestore, useUser } from "reactfire";
 import Button from 'react-bootstrap/Button';
+import MessageChange from "./MessageChange";
 
 
 const dateTimeFormat = new Intl.DateTimeFormat("en-GB", {
@@ -36,6 +37,7 @@ export default function Message({ createdAt, text, displayName, id, uid }) {
         >
           Delete
         </Button>{' '}
+        <MessageChange id={id} text={text}/>
         </>
       ) : null}
     </div>
