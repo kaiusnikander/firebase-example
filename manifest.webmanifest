@@ -1,1 +1,1 @@
-{"name":"firebase-example","short_name":"firebase-example","start_url":"/firebase-example/","display":"standalone","background_color":"#ffffff","lang":"en","scope":"/firebase-example/"}
+{"name":"My Awesome App","short_name":"MyApp","start_url":"/firebase-example/","display":"standalone","background_color":"#ffffff","lang":"en","scope":"/firebase-example/","description":"My Awesome App description","theme_color":"#ffffff"}
