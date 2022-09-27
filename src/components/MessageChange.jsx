@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { updateDoc, doc } from "firebase/firestore";
-import { useFirestore, useUser } from "reactfire";
+import { useFirestore } from "reactfire";
+import { deleteDoc } from "firebase/firestore";
 
 export default function MessageChange({text, id}) {
   const [show, setShow] = useState(false);
@@ -15,8 +16,8 @@ export default function MessageChange({text, id}) {
 
   return (
     <>
-        <Button variant="outline-warning" onClick={handleShow}>
-            Change form
+        <Button variant="warning" onClick={handleShow}>
+            Change text
         </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -33,6 +34,13 @@ export default function MessageChange({text, id}) {
           }}>
             Save Changes
           </Button>
+          <Button
+        variant="warning" onClick={async () => {
+            await deleteDoc(doc(firestore, "messages", id));
+          }}
+        >
+          Delete
+        </Button>{' '}
         </Modal.Footer>
       </Modal>
       </>
